@@ -38,3 +38,4 @@ function marquee() {
                 this.classList.remove('paused');
             }
         });
+        

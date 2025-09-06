@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding & Training Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8f9fa;
+            padding: 1.5rem; /* 25% less than 2rem */
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            border-radius: 18px; /* 25% less than 24px */
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1); /* 25% less */
+            width: 100%;
+            max-width: 375px; /* 25% less than 500px */
+            overflow: hidden;
+            display: grid;
+            grid-template-rows: auto 1fr;
+            min-height: 450px; /* 25% less than 600px */
+        }
+
+        .top-content {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            font-size: 0.825rem; /* 25% less than 1.1rem */
+            padding: 0.75rem; /* 25% less than 1rem */
+            min-height: 225px; /* 25% less than 300px */
+        }
+
+        .screenshot-placeholder {
+            width: 100%;
+            height: 100%;
+            border: 1.5px dashed #d1d5db; /* 25% less than 2px */
+            border-radius: 9px; /* 25% less than 12px */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: #f9fafb;
+        }
+
+        .top-content img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 9px; /* 25% less than 12px */
+        }
+
+        .bottom-content {
+            padding: 1.875rem; /* 25% less than 2.5rem */
+            display: flex;
+            flex-direction: column;
+            margin-top: 0.15rem; /* 10% of the typical 1.5rem gap */
+        }
+
+        .card-icon {
+            width: 45px; /* 25% less than 60px */
+            height: 45px;
+            background: #f1f3f4;
+            border: 1.5px solid #e8eaed; /* 25% less than 2px */
+            border-radius: 12px; /* 25% less than 16px */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem; /* 25% less than 2rem */
+            font-size: 21px; /* 25% less than 28px */
+        }
+
+        .card-icon svg {
+            width: 21px; /* 25% less than 28px */
+            height: 21px;
+        }
+
+        .card-title {
+            font-size: 1.6875rem; /* 25% less than 2.25rem */
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.1;
+            margin-bottom: 1.125rem; /* 25% less than 1.5rem */
+        }
+
+        .card-description {
+            color: #6b7280;
+            font-size: 0.825rem; /* 25% less than 1.1rem */
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                max-width: 300px; /* 25% less than 400px */
+                min-height: 375px; /* 25% less than 500px */
+            }
+            .top-content {
+                min-height: 150px; /* 25% less than 200px */
+            }
+            .bottom-content {
+                padding: 1.5rem; /* 25% less than 2rem */
+            }
+            .card-title {
+                font-size: 1.35rem; /* 25% less than 1.8rem */
+            }
+            body {
+                padding: 0.75rem; /* 25% less than 1rem */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="top-content">
+            <img src="card3.png" alt="card3">
+        </div>
+        <div class="bottom-content">
+            <div class="card-icon"><svg class="size-8 mb-2 md:mb-4 text-gray-900" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.6 3H9.4C7.15979 3 6.03969 3 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3 6.03969 3 7.15979 3 9.4V9.6C3 11.8402 3 12.9603 3.43597 13.816C3.81947 14.5686 4.43139 15.1805 5.18404 15.564C6.03969 16 7.15979 16 9.4 16H14.6C16.8402 16 17.9603 16 18.816 15.564C19.5686 15.1805 20.1805 14.5686 20.564 13.816C21 12.9603 21 11.8402 21 9.6V9.4C21 7.15979 21 6.03969 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C17.9603 3 16.8402 3 14.6 3Z" stroke="currentColor" stroke-width="1.6"></path>
+<path d="M18.5 21H5.5C4.11929 21 3 19.8807 3 18.5C3 17.1193 4.11929 16 5.5 16H18.5C19.8807 16 21 17.1193 21 18.5C21 19.8807 19.8807 21 18.5 21Z" stroke="currentColor" stroke-width="1.6"></path>
+<path d="M7.5 12L7.5 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+<path d="M10.5 12L10.5 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+<path d="M13.5 12L13.5 10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+<path d="M16.5 12L16.5 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+</svg></div>
+            <h2 class="card-title">Onboarding,<br>Information & Training</h2>
+            <p class="card-description">Efficient, media rich and intuitive development of the people in your organization.</p>
+        </div>
+    </div>
+</body>
+</html>

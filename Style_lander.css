@@ -2,7 +2,7 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
-    padding: 40px 20px;
+    
     margin: 0;
 }
 
@@ -15,8 +15,8 @@ body {
 .parent {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    gap: 4px;
+    grid-template-rows: repeat(6, 1fr) repeat(6, auto); /* first 6 rows flexible, last 6 auto */
+    /*gap: 4px;*/
 }
 
 .parent::before {
@@ -348,6 +348,10 @@ body {
     filter: grayscale(0%);
 }
 
+.div4 hr{
+    margin-top: 38px;
+}
+
 @keyframes scroll {
     from {
         transform: translateX(0);
@@ -395,14 +399,305 @@ body {
 .div5 {
     grid-column: 1 / span 6;
     grid-row: 7 / span 4;
+    margin-left: 18%;
 }
+
+
+/* AI Chat Bot Styles for div4 */
+.chatbot-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    /*background-color: #f8f9fa;*/
+    border-radius: 12px;
+}
+
+/* Badge */
+.chatbot-badge {
+    display: inline-block;
+    background-color: #4ade80;
+    color: #065f46;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-bottom: 32px;
+    letter-spacing: 0.025em;
+}
+
+/* Header with sparkles */
+.chatbot-header {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.chatbot-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Sparkles */
+.chatbot-sparkles {
+    position: absolute;
+    top: -10px;
+    right: -20px;
+}
+
+.chatbot-sparkle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #111827;
+    transform: rotate(45deg);
+    animation: chatbot-sparkle 2s ease-in-out infinite;
+}
+
+.chatbot-sparkle::before,
+.chatbot-sparkle::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #111827;
+}
+
+.chatbot-sparkle::before {
+    transform: rotate(45deg);
+}
+
+.chatbot-sparkle::after {
+    transform: rotate(-45deg);
+}
+
+.chatbot-sparkle-1 {
+    top: 0;
+    right: 0;
+    animation-delay: 0s;
+}
+
+.chatbot-sparkle-2 {
+    top: 15px;
+    right: 25px;
+    width: 6px;
+    height: 6px;
+    animation-delay: 0.5s;
+}
+
+.chatbot-sparkle-2::before,
+.chatbot-sparkle-2::after {
+    width: 6px;
+    height: 6px;
+}
+
+.chatbot-sparkle-3 {
+    top: -5px;
+    right: 40px;
+    width: 10px;
+    height: 10px;
+    animation-delay: 1s;
+}
+
+.chatbot-sparkle-3::before,
+.chatbot-sparkle-3::after {
+    width: 10px;
+    height: 10px;
+}
+
+@keyframes chatbot-sparkle {
+    0%, 100% {
+        opacity: 1;
+        transform: rotate(45deg) scale(1);
+    }
+    50% {
+        opacity: 0.4;
+        transform: rotate(45deg) scale(0.8);
+    }
+}
+
+/* Subtitle */
+.chatbot-subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #6b7280;
+    line-height: 1;
+    /*margin-bottom: 48px;*/
+    max-width: 700px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Features */
+.chatbot-features {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.chatbot-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.chatbot-feature-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111827;
+    margin-top: 4px;
+}
+
+.chatbot-feature-icon svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 1.5;
+}
+
+.chatbot-feature-content {
+    flex: 1;
+}
+
+.chatbot-feature-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+    line-height: 1;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.chatbot-feature-description {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #6b7280;
+    line-height: 1;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chatbot-content {
+        padding: 40px 20px;
+    }
+    
+    .chatbot-title {
+        font-size: 2.5rem;
+    }
+    
+    .chatbot-subtitle {
+        font-size: 1.125rem;
+        margin-bottom: 40px;
+    }
+    
+    .chatbot-features {
+        gap: 32px;
+    }
+    
+    .chatbot-feature {
+        gap: 16px;
+    }
+    
+    .chatbot-feature-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .chatbot-feature-title {
+        font-size: 1.25rem;
+    }
+    
+    .chatbot-sparkles {
+        right: -10px;
+        top: -5px;
+    }
+    
+    .chatbot-sparkle-2 {
+        right: 15px;
+    }
+    
+    .chatbot-sparkle-3 {
+        right: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chatbot-title {
+        font-size: 2rem;
+    }
+    
+    .chatbot-subtitle {
+        font-size: 1rem;
+    }
+    
+    .chatbot-feature-title {
+        font-size: 1.125rem;
+    }
+    
+    .chatbot-feature-description {
+        font-size: 0.9rem;
+    }
+}
+
+
 
 .div6 {
     grid-column: 7 / span 6;
     grid-row: 7 / span 4;
 }
 
+.div6 img {
+    width: auto;
+    height: 900px;
+    object-fit: cover;
+}
 .div7 {
     grid-column: 1 / -1;
     grid-row: 11;
+    margin-left: 12%;
+    margin-right: 12%;
+    /* Remove or reduce margin-top/margin-bottom if present */
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.frame1 {
+    width: 100%;
+    max-width: 900px;
+    min-width: 0;
+    height: 120px; /* Adjust as needed for your header.html content */
+    min-height: 60px;
+    border: none;
+    border-radius: 12px;
+    display: block;
+    left: 0;
+    top: 10px
+    ;
+    box-sizing: border-box;
+}
+
+/* Make frame2 bigger and beautiful */
+.frame2 {
+    width: 96vw;
+    max-width: 1200px;
+    height: 80vh;
+    min-height: 500px;
+    border: none;
+    border-radius: 24px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.13), 0 1.5px 8px rgba(0,0,0,0.07);
+    display: block;
+    margin: 40px auto 0 auto;
+    background: #fff;
+    transition: box-shadow 0.3s;
+}
+.frame2:hover {
+    box-shadow: 0 16px 60px rgba(0,0,0,0.18), 0 3px 16px rgba(0,0,0,0.10);
 }

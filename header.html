@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Highlights</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /*body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f9fafb;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 10vh;
+        }
+        */
+        .container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .title {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 700;
+            color: #111827;
+            position: relative;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+        
+        .esos{
+          position: absolute; /* or relative, fixed */
+          top: 10%; /* Moves the element 50px down from the top */
+          left:80%;
+        }
+        
+        .sparkle-svg {
+            width: 120px;
+            height: auto;
+            color: #111827;
+            opacity: 0.8;
+        }
+
+        @media (min-width: 768px) {
+            .sparkle-svg {
+                width: 160px;
+            }
+        }
+
+        /* Animation for sparkles */
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.4;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+        }
+
+        .sparkle-svg {
+            animation: twinkle 2s ease-in-out infinite;
+        }
+
+        /* Hover effect */
+        .container:hover .sparkle-svg {
+            animation-duration: 0.8s;
+            opacity: 1;
+        }
+
+        /* Secondary text styling */
+        .subtitle {
+            margin-top: 1rem;
+            color: #6b7280;
+            font-size: 1rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .subtitle::after {
+            content: "→";
+            font-size: 1.2em;
+            transition: transform 0.2s ease;
+        }
+
+        .container:hover .subtitle::after {
+            transform: translateX(4px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Product highlights</h1>
+        <div class="esos">
+        <svg class="sparkle-svg" aria-hidden="true" role="presentation" viewBox="0 0 117 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.52643 7.99766C4.94183 5.69998 2.85228 3.68244 1 1.59863M109.77 14.3969C110.378 13.7416 110.937 13.0433 111.515 12.3608M68 9.00049C68.2139 6.63002 68.6547 4.31683 69 2.00049M17.8709 63.5527C15.6537 64.3763 13.7205 66.0614 11.7627 67.334M70 65.0005C70.3433 66.9512 70.6707 68.9328 71 71.0005M111.806 56.8633C113.335 57.5003 114.724 58.3876 116.169 59.1902" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+        </svg>
+        </div>
+        <p class="subtitle">See all features</p>
+    </div>
+</body>
+</html>

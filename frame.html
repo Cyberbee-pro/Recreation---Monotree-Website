@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4 Iframes Proportional Layout</title>
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            min-width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+        }
+        .container {
+            display: grid;
+            grid-template-rows: 1fr 2.1fr;
+            height: 90vh;           /* Increased to fit content, but not overflow */
+            width: 90vw;            /* Increased to fit content, but not overflow */
+            max-width: 1000px;      /* Adjust as needed for your card content */
+            max-height: 800px;      /* Adjust as needed for your card content */
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        .row {
+            display: grid;
+            grid-template-columns: 60% 40%;
+            height: 100%;
+            width: 100%;
+        }
+        .row.second {
+            grid-template-columns: 40% 60%;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <iframe src="cardd1.html"></iframe>
+            <iframe src="card2.html"></iframe>
+        </div>
+        <div class="row second">
+            <iframe src="card3.html"></iframe>
+            <iframe src="card4.html"></iframe>
+        </div>
+    </div>
+</body>
+</html>

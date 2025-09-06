@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Operations Card</title>
+    <style>
+        html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    background: #f8f9fa;
+}
+.card {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    min-width: 0;
+    min-height: 0;
+    border-radius: 21.6px; /* 10% smaller than 24px */
+    box-shadow: 0 7px 29px rgba(0, 0, 0, 0.09);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
+}
+.left-content, .right-content {
+    padding: 1.8rem; /* 10% smaller than 2rem */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card-icon {
+    width: 54px;    /* 10% smaller than 60px */
+    height: 54px;
+    background: #f1f3f4;
+    border: 1.8px solid #e8eaed;
+    border-radius: 14.4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.8rem;
+}
+.card-icon svg {
+    width: 27px;    /* 10% smaller than 30px */
+    height: 27px;
+    fill: #4a5568;
+}
+.card-title {
+    font-size: 2.025rem; /* 10% smaller than 2.25rem */
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.1;
+    margin-bottom: 1.35rem;
+}
+.card-description {
+    color: #6b7280;
+    font-size: 0.99rem; /* 10% smaller than 1.1rem */
+    line-height: 1.5;
+    flex-grow: 1;
+}
+.right-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9ca3af;
+    font-size: 0.99rem; /* 10% smaller than 1.1rem */
+    padding: 0.9rem;
+}
+.right-content img {
+    width: 90%;
+    height: auto;
+    border-radius: 10.8px; /* 10% smaller than 12px */
+    max-height: 90%;
+    object-fit: contain;
+}
+.screenshot-placeholder {
+    width: 100%;
+    height: 100%;
+    border: 1.8px dashed #d1d5db;
+    border-radius: 10.8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #f9fafb;
+}
+@media (max-width: 768px) {
+    .card {
+        grid-template-columns: 1fr;
+        max-width: 450px; /* 10% smaller than 500px */
+    }
+    .right-content {
+        min-height: 270px; /* 10% smaller than 300px */
+        border-left: none;
+        border-top: 1px solid #e5e7eb;
+    }
+    .left-content {
+        padding: 1.8rem;
+    }
+    .card-title {
+        font-size: 1.62rem; /* 10% smaller than 1.8rem */
+    }
+    body {
+        padding: 0.9rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="left-content">
+            <div class="card-icon">
+                <svg class="size-8 mb-2 md:mb-4 text-gray-900" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M28 15V15C28 18.7275 28 20.5913 27.391 22.0615C26.5791 24.0217 25.0217 25.5791 23.0615 26.391C21.5913 27 19.7275 27 16 27H14" stroke="currentColor" stroke-width="2"></path>
+<path d="M24.2036 7H10.4C8.15979 7 7.03969 7 6.18404 7.43597C5.43139 7.81947 4.81947 8.43139 4.43597 9.18404C4 10.0397 4 11.1598 4 13.4V22.1913C4 22.9426 4 23.3183 4.05032 23.6325C4.32354 25.3386 5.66138 26.6765 7.36749 26.9497C7.68175 27 8.05741 27 8.80873 27H17.5622C20.4087 27 22.574 24.444 22.106 21.6361C22.0541 21.3244 22.3244 21.0541 22.6361 21.106C25.444 21.574 28 19.4087 28 16.5622V10.7964C28 8.69969 26.3003 7 24.2036 7Z" stroke="currentColor" stroke-width="2"></path>
+<path d="M10 7L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+<path d="M22 7L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+<path d="M12 15.8C13.4708 17.0542 14.0018 17.7515 14.7826 19C16.245 16.403 17.4141 15.1011 20 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+            </div>
+            <h2 class="card-title">Daily Operations</h2>
+            <p class="card-description">Streamline daily tasks, fill out forms and run department check ups.</p>
+        </div>
+        <div class="right-content">
+            <img src="card4.png" alt="card1">>
+        </div>
+    </div>
+</body>
+</html>
