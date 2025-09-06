@@ -1,5 +1,6 @@
+/*
 .parent {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     padding-left: 3%;
     padding-right: 5%;
@@ -13,17 +14,48 @@
   gap : 20px;
   background-color: aquamarine;
 }
-.div1 h1{
+*/
+@font-face {
+  font-family: 'Poppins';
+  src: url('fonts/Poppins-Regular.woff2') format('woff2');
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 8px;
+}
+    
+.div1 {
+    grid-column: span 12 / span 12;
+    display: flex;
     padding-top: 1%;
+    padding-left: 5.6%;
+    align-items: center;
+    gap : 20px;
+    background-color: aquamarine;
+}
+.div1 h1{
     padding-left: 1%;
     font-size: 18px;
+}
+.arrow {
+     /* aligns with text */
+  margin-left: 5px;         /* space after "Product" */
+  cursor: pointer;          /* feels clickable */
+  transition: transform 0.2s;
+}
+
+.arrow:hover {
+  transform: rotate(180deg); /* flips on hover (dropdown effect) */
 }
 
 .div1 h2{
     font-size: 25px;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
     padding-right: 3%;
-    src: url('fonts/Poppins-Regular.woff2') format('woff2');
 }
 
 .div1 h2 img{
