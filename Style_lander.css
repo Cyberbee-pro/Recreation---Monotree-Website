@@ -15,7 +15,7 @@ body {
 .parent {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(6, 1fr) repeat(6, auto); /* first 6 rows flexible, last 6 auto */
+    grid-template-rows: repeat(23, 1fr);
     /*gap: 4px;*/
 }
 
@@ -701,3 +701,16 @@ body {
 .frame2:hover {
     box-shadow: 0 16px 60px rgba(0,0,0,0.18), 0 3px 16px rgba(0,0,0,0.10);
 }
+
+/* Example for new divs: .div8 to .div18 */
+.div8  { grid-column: 1 / -1; grid-row: 8;  background: #f7fafc; }
+.div9  { grid-column: 1 / -1; grid-row: 9;  background: #f1f5f9; }
+.div10 { grid-column: 1 / -1; grid-row: 10; background: #f7fafc; }
+.div11 { grid-column: 1 / -1; grid-row: 11; background: #f1f5f9; }
+.div12 { grid-column: 1 / -1; grid-row: 12; background: #f7fafc; }
+.div13 { grid-column: 1 / -1; grid-row: 13; background: #f1f5f9; }
+.div14 { grid-column: 1 / -1; grid-row: 14; background: #f7fafc; }
+.div15 { grid-column: 1 / -1; grid-row: 15; background: #f1f5f9; }
+.div16 { grid-column: 1 / -1; grid-row: 16; background: #f7fafc; }
+.div17 { grid-column: 1 / -1; grid-row: 17; background: #f1f5f9; }
+.div18 { grid-column: 1 / -1; grid-row: 18; background: #f7fafc; }
