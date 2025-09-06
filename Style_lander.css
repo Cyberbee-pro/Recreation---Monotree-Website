@@ -15,7 +15,7 @@ body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
-    gap: 8px;
+    gap: 4px;
 }
 .parent::before {
     content: '';
@@ -37,6 +37,7 @@ body {
 /* Main content areas should be above the blur */
 .div2, .div3 {
     position: relative;
+    top : -10vh;
     z-index: 2;
 }
 
@@ -46,6 +47,7 @@ body {
     grid-column: span 12;
     top: 10px;
     width : 90%;
+    border-radius: 30px;
     display: flex;
     padding-left: 5.6%;
     align-items: center;
@@ -99,11 +101,15 @@ body {
 .arrow:hover {
     transform: rotate(180deg);
 }
-
+.custom-select{
+    position: relative;
+    display: inline-block;
+    padding-right: 20px;
+}
 /* Language Selector */
 .language {
-    width: 160px;
-    margin-right: 5%;
+    width: 100px;
+    margin-right: 10%;
     padding: 8px 12px;
     font-size: 16px;
     font-family: Arial, sans-serif;
@@ -136,7 +142,7 @@ body {
 .div2 {
     grid-column: 1 / span 6;
     grid-row: 2 / span 4;
-    margin-left: 3%;
+    margin-left: 18%;
 }
 
 .container {
@@ -145,7 +151,6 @@ body {
     background: white;
     padding: 60px 40px;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .main-title {
@@ -251,6 +256,141 @@ body {
     grid-row: 6;
 }
 
+.div4 img{
+    height: 50px;
+    width: auto;
+    display: block;
+  
+}
+.marquee {
+            --speed: 22s;
+            --count: 15;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            overflow: hidden;
+            height: 60px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .marquee::before,
+        .marquee::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 300px;
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        .marquee::before {
+            left: 0;
+            background: linear-gradient(to right, white, transparent);
+        }
+
+        .marquee::after {
+            right: 0;
+            background: linear-gradient(to left, white, transparent);
+        }
+
+        .marquee-track {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            animation: scroll var(--speed) linear infinite;
+            white-space: nowrap;
+        }
+
+        .marquee.paused .marquee-track {
+            animation-play-state: paused;
+        }
+
+        .marquee-item {
+            list-style: none;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 120px;
+            height: 60px;
+            padding: 10px;
+        }
+
+        .marquee-item a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .marquee-item a:hover {
+            transform: scale(1.05);
+        }
+
+        .marquee-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .marquee-item a:hover img {
+            filter: grayscale(0%);
+        }
+
+        /* Fallback for missing images */
+        .marquee-item .logo-placeholder {
+            width: 100px;
+            height: 40px;
+            background: linear-gradient(45deg, #e0e0e0, #f0f0f0);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #666;
+            font-weight: bold;
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(calc(-100% - 2rem));
+            }
+        }
+
+        .controls {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .controls button {
+            padding: 8px 16px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 4px;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .controls button:hover {
+            background: #0056b3;
+        }
+
+        .controls button.active {
+            background: #28a745;
+        }
 .div5 {
     grid-column: 1 / span 6;
     grid-row: 7 / span 4;
