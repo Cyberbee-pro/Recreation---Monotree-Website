@@ -668,6 +668,7 @@ body {
     margin-top: 0;
     margin-bottom: 0;
     padding: 0;
+    background-color: white;
 }
 
 .frame1 {
@@ -704,13 +705,14 @@ body {
 }
 
 .testimonial-section {
-    padding: 80px 0;
-    background-color: #f8f9fa;
+    padding: 40px 0;
+    background-color: white;
 }
 
 .testimonial-container {
-    max-width: 800px;
+    max-height: 500px;
     margin: 0 auto;
+    margin-left: 10%;
     padding: 0 20px;
 }
 
@@ -991,7 +993,108 @@ body {
 
 
 
-.div17 { grid-column: 1 / -1; grid-row: 17; background: #f1f5f9; }
+.div17 { grid-column: 1 / -1; grid-row: 17; }
+
+ /* CSS for CTA Section with div-17 prefix */
+        .div-17-cta-section {
+            background-color: #ffffff;
+            padding: 120px 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .div-17-background-graphics{
+            position: absolute;
+            z-index: 1;
+            top : 0;
+            
+                margin-left: 9%;
+        }
+
+            .div-17-graphic-left{
+                position: absolute;
+            }
+        
+            .div-17-graphic-right{
+                position: absolute;
+                transform: translateX(220%);
+            }
+
+        .div-17-content-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .div-17-main-title {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 700;
+            color: #000000;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .div-17-subtitle {
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 700;
+            color: #000000;
+            line-height: 1.2;
+            margin-bottom: 32px;
+        }
+
+        .div-17-description {
+            font-size: 18px;
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 48px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .div-17-cta-button {
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+        }
+
+        .div-17-cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
+        }
+
+        .div-17-cta-button:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .div-17-cta-section {
+                padding: 80px 20px;
+            }
+
+            .div-17-description {
+                font-size: 16px;
+                margin-bottom: 40px;
+            }
+
+            .div-17-cta-button {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
 .div18 { grid-column: 1 / -1; grid-row: 18;max-height: 600px;}
 
 
