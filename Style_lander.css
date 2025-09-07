@@ -976,9 +976,81 @@ body {
 
 
 
-.div13 { grid-column: 1 / -1; grid-row: 13; background: #f1f5f9; }
+.div13 { grid-column: 1 / -1; grid-row: 13; margin-left: 12%;}
+
+
+
+
+
+
+
+.div-13-container {
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .div-13-heading {
+            font-size: clamp(2rem, 6vw, 60px);
+            font-weight: 700;
+            line-height: 1.1;
+            color: #1a1a1a;
+            letter-spacing: -0.02em;
+        }
+
+        .div-13-highlight {
+            position: relative;
+            display: inline-block;
+        }
+
+        .div-13-customize-word {
+            position: relative;
+            z-index: 2;
+        }
+
+        .div-13-underline-svg {
+            position: absolute;
+            bottom: -8px;
+            left: -10px;
+            right: -10px;
+            height: 20px;
+            z-index: 1;
+        }
+
+        .div-13-brand-word {
+            position: relative;
+            z-index: 2;
+        }
+
+        .div-13-dots-svg {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            width: 25px;
+            height: 25px;
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            .div-13-container {
+                padding: 1rem;
+            }
+            
+            .div-13-underline-svg {
+                bottom: -4px;
+                height: 15px;
+            }
+            
+            .div-13-dots-svg {
+                width: 20px;
+                height: 20px;
+                top: -10px;
+                right: -10px;
+            }
+        }
+
 .div14 { grid-column: 1 / -1; grid-row: 14; background: #f7fafc; }
 .div15 { grid-column: 1 / -1; grid-row: 15; background: #f1f5f9; }
+
 .div16 { grid-column: 1 / -1; grid-row: 16; }
 
 .div16 video {
