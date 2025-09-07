@@ -1048,8 +1048,8 @@ body {
             }
         }
 
-.div14 { grid-column: 1 / -1; grid-row: 14; background: #f7fafc; }
-.div15 { grid-column: 1 / -1; grid-row: 15; background: #f1f5f9; }
+.div14 { grid-column: 1 / -1; grid-row: 14;margin-left: 12%; }
+.div15 { grid-column: 1 / -1; grid-row: 15;  }
 
 .div16 { grid-column: 1 / -1; grid-row: 16; }
 
