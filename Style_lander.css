@@ -977,20 +977,36 @@ body {
 .div13 { grid-column: 1 / -1; grid-row: 13; background: #f1f5f9; }
 .div14 { grid-column: 1 / -1; grid-row: 14; background: #f7fafc; }
 .div15 { grid-column: 1 / -1; grid-row: 15; background: #f1f5f9; }
-.div16 { grid-column: 1 / -1; grid-row: 16; background: #f7fafc; }
+.div16 { grid-column: 1 / -1; grid-row: 16; }
+
+.div16 video {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 30px;
+    margin-left: 11%;
+    /* Play infinitely */
+    /* This is ignored by browsers, use HTML attribute */
+}
+
+
+
 .div17 { grid-column: 1 / -1; grid-row: 17; background: #f1f5f9; }
-.div18 { grid-column: 1 / -1; grid-row: 18; background: #f7fafc; }
+.div18 { grid-column: 1 / -1; grid-row: 18;max-height: 600px;}
 
 
 
 .div-18-footer-section {
             background-color: #f8fafc;
-            padding: 80px 20px 40px 20px;
+            /*padding: 80px 20px 40px 20px;*/
+            padding-left: 20px;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             border-top: 1px solid #e2e8f0;
+            max-height: 600px;
         }
 
         .div-18-footer-container {
+            max-height: 600px;
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
@@ -1002,7 +1018,8 @@ body {
         .div-18-left-section {
             display: flex;
             flex-direction: column;
-            gap: 24px;
+            gap: 2.4px; /* 90% less than original 24px */
+            line-height: 1; /* Tighter line spacing */
         }
 
         .div-18-logo {
@@ -1036,8 +1053,7 @@ body {
         .div-18-certification-badge {
             width: 120px;
             height: 40px;
-            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-            border-radius: 8px;
+            border-radius: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1046,6 +1062,9 @@ body {
             font-weight: 600;
             text-align: center;
             line-height: 1.2;
+        }
+        .div-18-certification-badge img {
+         border-radius: 10px;
         }
 
         .div-18-certification-text {
@@ -1109,6 +1128,13 @@ body {
             color: #3b82f6;
         }
 
+        .div-18-logo img{
+             width: 45px;
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
         @media (max-width: 1024px) {
             .div-18-footer-container {
                 grid-template-columns: 1fr;
@@ -1134,10 +1160,7 @@ body {
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
-.div18 img{
-    width: 40px;
-    height: auto;
-}
+
             .div-18-logo {
                 flex-direction: column;
                 align-items: flex-start;
