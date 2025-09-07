@@ -16,12 +16,6 @@
 <ul class="list-disc pl-4 my-0">
 <li class="my-0"><a href="#overview">Overview</a></li>
 <li class="my-0"><a href="#getting-started">Getting Started</a>
-<ul class="list-disc pl-4 my-0">
-<li class="my-0"><a href="#prerequisites">Prerequisites</a></li>
-<li class="my-0"><a href="#installation">Installation</a></li>
-<li class="my-0"><a href="#usage">Usage</a></li>
-<li class="my-0"><a href="#testing">Testing</a></li>
-</ul>
 </li>
 </ul>
 <hr>
@@ -37,36 +31,10 @@
 <li class="my-0">⚙️ <strong>Modular</strong> Architecture: Facilitates easy integration and customization for complex web projects.</li>
 </ul>
 <hr>
-<h2>Getting Started</h2>
-<h3>Prerequisites</h3>
-<p>This project requires the following dependencies:</p>
 <ul class="list-disc pl-4 my-0">
-<li class="my-0"><strong>Programming Language:</strong> HTML</li>
+<li class="my-0"><strong>Programming Language:</strong> HTML,CSS,JS</li>
 </ul>
-<h3>Installation</h3>
-<p>Build Recreation---Monotree-Website from the source and install dependencies:</p>
-<ol>
-<li class="my-0">
-<p><strong>Clone the repository:</strong></p>
-<pre><code class="language-sh">❯ git clone https://github.com/Cyberbee-pro/Recreation---Monotree-Website
-</code></pre>
-</li>
-<li class="my-0">
-<p><strong>Navigate to the project directory:</strong></p>
-<pre><code class="language-sh">❯ cd Recreation---Monotree-Website
-</code></pre>
-</li>
-<li class="my-0">
-<p><strong>Install the dependencies:</strong></p>
-</li>
-</ol>
-<p>echo 'INSERT-INSTALL-COMMAND-HERE'</p>
-<h3>Usage</h3>
-<p>Run the project with:</p>
-<p>echo 'INSERT-RUN-COMMAND-HERE'</p>
-<h3>Testing</h3>
-<p>Recreation---monotree-website uses the {<strong>test_framework</strong>} test framework. Run the test suite with:</p>
-<p>echo 'INSERT-TEST-COMMAND-HERE'</p>
+
 <hr>
 <div align="left" class=""><a href="#top">⬆ Return</a></div>
 <hr></div></div></div>
