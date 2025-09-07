@@ -15,7 +15,7 @@ body {
 .parent {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(23, 1fr);
+    grid-template-rows: repeat(23, auto); /* Use auto instead of 1fr */
     /*gap: 4px;*/
 }
 
@@ -43,6 +43,7 @@ body {
     position: relative;
     top: -10vh;
     z-index: 2;
+    margin-top: 25%;
 }
 
 /* Header Section */
@@ -398,7 +399,7 @@ body {
 
 .div5 {
     grid-column: 1 / span 6;
-    grid-row: 7 / span 4;
+    grid-row: 7;
     margin-left: 18%;
 }
 
@@ -650,7 +651,7 @@ body {
 
 .div6 {
     grid-column: 7 / span 6;
-    grid-row: 7 / span 4;
+    grid-row: 7;
 }
 
 .div6 img {
@@ -660,7 +661,7 @@ body {
 }
 .div7 {
     grid-column: 1 / -1;
-    grid-row: 11;
+    grid-row: 8;
     margin-left: 12%;
     margin-right: 12%;
     /* Remove or reduce margin-top/margin-bottom if present */
@@ -702,11 +703,232 @@ body {
     box-shadow: 0 16px 60px rgba(0,0,0,0.18), 0 3px 16px rgba(0,0,0,0.10);
 }
 
+.testimonial-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.testimonial-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.testimonial-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.underlined-text {
+    position: relative;
+    display: inline-block;
+    color: #111827;
+}
+
+.svg-underline {
+    position: absolute;
+    color: #111827;
+    width: 80px;
+    right: -2px;
+    bottom: -8px;
+    pointer-events: none;
+}
+
+.cases-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #111827;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.cases-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #111827;
+    transition: width 0.3s ease;
+}
+
+.cases-link:hover::after {
+    width: calc(100% - 30px);
+}
+
+.cases-link:hover {
+    color: #374151;
+}
+
+.cases-link:hover .arrow-icon {
+    transform: translateX(5px);
+}
+
+.arrow-icon {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+/* Responsive design for testimonials */
+@media (min-width: 768px) {
+    .svg-underline {
+        width: 80px;
+        bottom: -8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-section {
+        padding: 30px 0;
+    }
+    
+    .testimonial-title {
+        font-size: clamp(1.8rem, 8vw, 2.8rem);
+        margin-bottom: 20px;
+    }
+    
+    .cases-link {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-title {
+        font-size: clamp(1.5rem, 10vw, 2.2rem);
+    }
+}
+
 /* Example for new divs: .div8 to .div18 */
-.div8  { grid-column: 1 / -1; grid-row: 8;  background: #f7fafc; }
-.div9  { grid-column: 1 / -1; grid-row: 9;  background: #f1f5f9; }
-.div10 { grid-column: 1 / -1; grid-row: 10; background: #f7fafc; }
-.div11 { grid-column: 1 / -1; grid-row: 11; background: #f1f5f9; }
+.div8  { grid-column: 1 / -1; grid-row: 9;  }
+.div9  { grid-column: 1 / span 6; grid-row: 10;  }
+
+.div9 img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    margin-left: 20%;
+    border-radius: 30px;
+}
+
+.div10 { grid-column: 7 / span 6; grid-row: 10; }
+
+
+.div10-testimonial-card {
+            max-width: 600px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            position: relative;
+            margin: 20px auto;
+        }
+
+        .div10-quote-icon {
+            width: 32px;
+            height: 32px;
+            background-color: #000000;
+            border-radius: 50%;
+            position: relative;
+            margin-bottom: 24px;
+        }
+
+        .div10-quote-icon::before {
+            content: '„';
+            position: absolute;
+            top: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .div10-testimonial-text {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333333;
+            margin-bottom: 32px;
+            font-weight: 400;
+        }
+
+        .div10-author-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .div10-author-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .div10-author-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 4px;
+        }
+
+        .div10-author-title {
+            font-size: 14px;
+            color: #666666;
+            font-weight: 400;
+        }
+
+        .div10-company-logo {
+            font-size: 16px;
+            font-weight: 600;
+            color: #000000;
+            text-align: right;
+        }
+
+        @media (max-width: 600px) {
+            .div10-testimonial-card {
+                padding: 24px;
+                margin: 16px;
+            }
+            
+            .div10-testimonial-text {
+                font-size: 16px;
+            }
+            
+            .div10-author-section {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+            
+            .div10-company-logo {
+                text-align: left;
+            }
+    }
+
+.div11 { grid-column: 1 / -1; grid-row: 11; }
+
+
+.div11 img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 30px;
+    margin-left: 11%;
+}
+
+
+
 .div12 { grid-column: 1 / -1; grid-row: 12; background: #f7fafc; }
 .div13 { grid-column: 1 / -1; grid-row: 13; background: #f1f5f9; }
 .div14 { grid-column: 1 / -1; grid-row: 14; background: #f7fafc; }
