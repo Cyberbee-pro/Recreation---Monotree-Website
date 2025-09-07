@@ -929,7 +929,51 @@ body {
 
 
 
-.div12 { grid-column: 1 / -1; grid-row: 12; background: #f7fafc; }
+.div12 { grid-column: 1 / -1; grid-row: 12; background: black; }
+
+
+ .div-12-integrations-section {
+            background: #000000;
+            min-height: 50vhvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .div-12-content-container {
+            max-width: 1200px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .div-12-main-title {
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .div-12-description {
+            font-size: 18px;
+            color: #94a3b8;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto 80px auto;
+        }
+
+        .div12 img {
+            margin-left: 12%;    
+            height: auto;
+            object-fit: cover;
+        }
+
+
+
+
+
 .div13 { grid-column: 1 / -1; grid-row: 13; background: #f1f5f9; }
 .div14 { grid-column: 1 / -1; grid-row: 14; background: #f7fafc; }
 .div15 { grid-column: 1 / -1; grid-row: 15; background: #f1f5f9; }
